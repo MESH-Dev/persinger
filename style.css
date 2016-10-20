@@ -563,18 +563,6 @@ p {
   padding-right: 0;
 }
 
-/* line 86, sass/base/_grid.scss */
-.stuff {
-  background-color: #ffcc00;
-  color: black;
-  text-align: center;
-}
-
-/* line 92, sass/base/_grid.scss */
-.row {
-  margin: 10px 0 0 0;
-}
-
 /* Modules */
 /* line 4, sass/modules/_buttons.scss */
 .button,
@@ -869,4 +857,43 @@ ul,
 ol,
 form {
   margin-bottom: 2.5rem;
+}
+
+/* line 2, sass/modules/_modules.scss */
+.landing-block {
+  position: relative;
+  height: 50vh;
+  overflow: hidden;
+}
+
+/* line 8, sass/modules/_modules.scss */
+.landing-block img {
+  display: block;
+}
+
+/* line 12, sass/modules/_modules.scss */
+.landing-block .hover-text {
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  padding: 0px;
+  color: #ffffff;
+  background: #000000;
+  text-decoration: none;
+  text-align: center;
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  transition: opacity 500ms;
+}
+
+/* line 31, sass/modules/_modules.scss */
+.landing-block:hover .hover-text {
+  opacity: 1;
+  background-color: red;
+  color: white;
 }

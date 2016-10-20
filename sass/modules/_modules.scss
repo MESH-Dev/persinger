@@ -1,0 +1,35 @@
+//Landing Blocks
+.landing-block {
+    position: relative;
+    height: 50vh;
+    overflow: hidden;
+   
+}
+.landing-block img {
+    display: block;
+   // max-width: 100%;
+}
+.landing-block .hover-text {
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    padding: 0px;
+    color: #ffffff;
+    background: #000000;
+    text-decoration: none;
+    text-align: center;
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
+    transition: opacity 500ms;
+
+}
+.landing-block:hover .hover-text {
+    opacity: 1;
+    background-color: red;
+    color: white;
+}
