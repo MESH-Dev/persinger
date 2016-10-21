@@ -11,49 +11,7 @@
 			<?php the_content(); ?> -->
 
 		<?php endwhile; ?>
-	<div class="row">	
-		<div class="columns-4 no-padding">
-			<div class="landing-block">
-		   		<img src="http://lorempixel.com/900/900/" alt="" />
-		   		<a href="http://google.com" class="hover-text">Link</a>
-			</div>
-		</div>
-		<div class="columns-4 no-padding">
-			<div class="landing-block">
-		   		<img src="http://lorempixel.com/900/900/" alt="" />
-		   		<a href="http://google.com" class="hover-text">Link</a>
-			</div>
-		</div>
-		<div class="columns-4 no-padding">
-			<div class="landing-block">
-		   		<img src="http://lorempixel.com/900/900/" alt="" />
-		   		<a href="http://google.com" class="hover-text">Link</a>
-			</div>
-		</div>
-	</div>	
-	<div class="row">	
-		<div class="columns-4 no-padding">
-			<div class="landing-block">
-		   		<img src="http://lorempixel.com/900/900/" alt="" />
-		   		<a href="http://google.com" class="hover-text">Link</a>
-			</div>
-		</div>
-		<div class="columns-4 no-padding">
-			<div class="landing-block">
-		   		<img src="http://lorempixel.com/900/900/" alt="" />
-		   		<a href="http://google.com" class="hover-text">Link</a>
-			</div>
-		</div>
-		<div class="columns-4 no-padding">
-			<div class="landing-block">
-		   		<img src="http://lorempixel.com/900/900/" alt="" />
-		   		<a href="http://google.com" class="hover-text">Link</a>
-			</div>
-		</div>
-				
- 
- 
-		</div>
+	
  
 
 
