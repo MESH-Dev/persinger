@@ -34,13 +34,13 @@
 
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> >
  
 
 	<header>
 		<div class="container">
 
-			<div class="columns-10">
+			<div class="columns-8 offset-by-1">
 				<div class="logo">
 					 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"> <img src="<?php bloginfo( 'template_url' ); ?>/img/logo.png" alt=""></a></h1>
 				</div>

@@ -276,12 +276,23 @@ html {
 
 /* line 11, sass/base/_base-styles.scss */
 body {
-  font-size: 1.5em;
-  line-height: 1.6;
-  font-weight: 400;
+  font-size: 1.4em;
+  line-height: 1.428;
+  font-weight: 100;
+  font-family: "proxima-nova", sans-serif;
 }
 
-/* line 32, sass/base/_base-styles.scss */
+/* line 22, sass/base/_base-styles.scss */
+a {
+  color: #a42126;
+}
+/* line 24, sass/base/_base-styles.scss */
+a:hover {
+  color: #a42126;
+  text-decoration: underline;
+}
+
+/* line 33, sass/base/_base-styles.scss */
 hr {
   margin-top: 3rem;
   margin-bottom: 3.5rem;
@@ -312,87 +323,61 @@ hr {
 
 /* line 4, sass/base/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
+  font-family: "proxima-nova", sans-serif;
   margin-top: 0;
-  margin-bottom: 2rem;
-  font-weight: 300;
-}
-
-/* line 10, sass/base/_typography.scss */
-h1 {
-  font-size: 4.0rem;
-  line-height: 1.2;
-  letter-spacing: -.1rem;
+  margin-bottom: 0;
+  font-weight: 100;
 }
 
 /* line 11, sass/base/_typography.scss */
-h2 {
+h1 {
   font-size: 3.6rem;
-  line-height: 1.25;
-  letter-spacing: -.1rem;
+  line-height: 1.17;
 }
 
 /* line 12, sass/base/_typography.scss */
-h3 {
-  font-size: 3.0rem;
-  line-height: 1.3;
-  letter-spacing: -.1rem;
+h2 {
+  font-size: 2.8rem;
+  line-height: 1.143;
 }
 
 /* line 13, sass/base/_typography.scss */
-h4 {
-  font-size: 2.4rem;
-  line-height: 1.35;
-  letter-spacing: -.08rem;
+h3 {
+  font-size: 1.8rem;
+  line-height: 1.3333;
 }
 
 /* line 14, sass/base/_typography.scss */
-h5 {
+h4 {
   font-size: 1.8rem;
-  line-height: 1.5;
-  letter-spacing: -.05rem;
+  line-height: 1.3333;
+  font-weight: 700;
+  color: #a42126;
 }
 
 /* line 15, sass/base/_typography.scss */
+h5 {
+  font-size: 1.4rem;
+  line-height: 1.286;
+  font-weight: 400;
+  color: black;
+}
+
+/* line 16, sass/base/_typography.scss */
 h6 {
-  font-size: 1.5rem;
-  line-height: 1.6;
-  letter-spacing: 0;
+  font-size: 1.4rem;
+  line-height: 1.428;
+  font-weight: 100;
+  font-weight: 700;
 }
 
-@media (min-width: 550px) {
-  /* line 19, sass/base/_typography.scss */
-  h1 {
-    font-size: 5.0rem;
-  }
-
-  /* line 20, sass/base/_typography.scss */
-  h2 {
-    font-size: 4.2rem;
-  }
-
-  /* line 21, sass/base/_typography.scss */
-  h3 {
-    font-size: 3.6rem;
-  }
-
-  /* line 22, sass/base/_typography.scss */
-  h4 {
-    font-size: 3.0rem;
-  }
-
-  /* line 23, sass/base/_typography.scss */
-  h5 {
-    font-size: 2.4rem;
-  }
-
-  /* line 24, sass/base/_typography.scss */
-  h6 {
-    font-size: 1.5rem;
-  }
-}
-/* line 27, sass/base/_typography.scss */
+/* line 19, sass/base/_typography.scss */
 p {
+  font-size: 1.4rem;
+  line-height: 1.428;
+  font-weight: 100;
   margin-top: 0;
+  margin-bottom: 1.8rem;
 }
 
 /* line 3, sass/base/_grid.scss */
@@ -609,50 +594,12 @@ form {
   margin-bottom: 2.5rem;
 }
 
-/* line 2, sass/modules/_modules.scss */
-.landing-block {
-  position: relative;
-  height: 50vh;
-}
-
-/* line 8, sass/modules/_modules.scss */
-.landing-block img {
-  display: block;
-}
-
-/* line 12, sass/modules/_modules.scss */
-.landing-block .hover-text {
-  opacity: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  padding: 0px;
-  color: #ffffff;
-  background: #000000;
-  text-decoration: none;
-  text-align: center;
-  -webkit-transition: opacity 500ms;
-  -moz-transition: opacity 500ms;
-  -o-transition: opacity 500ms;
-  transition: opacity 500ms;
-}
-
-/* line 31, sass/modules/_modules.scss */
-.landing-block:hover .hover-text {
-  opacity: 1;
-  background-color: red;
-  color: white;
-}
-
-/* line 39, sass/modules/_modules.scss */
+/* line 2, sass/modules/_navigation.scss */
 nav {
   display: none;
 }
 
-/* line 41, sass/modules/_modules.scss */
+/* line 4, sass/modules/_navigation.scss */
 #nav-icon {
   width: 100px;
   height: 100px;
@@ -672,7 +619,7 @@ nav {
   transition: .5s ease-in-out;
   cursor: pointer;
 }
-/* line 60, sass/modules/_modules.scss */
+/* line 23, sass/modules/_navigation.scss */
 #nav-icon span {
   display: block;
   position: absolute;
@@ -690,29 +637,29 @@ nav {
   -o-transition: .25s ease-in-out;
   transition: .25s ease-in-out;
 }
-/* line 79, sass/modules/_modules.scss */
+/* line 42, sass/modules/_navigation.scss */
 #nav-icon span:nth-child(1) {
   top: 40px;
   width: 20px;
 }
-/* line 83, sass/modules/_modules.scss */
+/* line 46, sass/modules/_navigation.scss */
 #nav-icon span:nth-child(2) {
   top: 48px;
   width: 25px;
 }
-/* line 88, sass/modules/_modules.scss */
+/* line 51, sass/modules/_navigation.scss */
 #nav-icon span:nth-child(3) {
   top: 56px;
 }
-/* line 92, sass/modules/_modules.scss */
+/* line 55, sass/modules/_navigation.scss */
 #nav-icon:hover span {
   width: 30px;
 }
-/* line 95, sass/modules/_modules.scss */
+/* line 58, sass/modules/_navigation.scss */
 #nav-icon.open span {
   width: 30px;
 }
-/* line 104, sass/modules/_modules.scss */
+/* line 67, sass/modules/_navigation.scss */
 #nav-icon.open span:nth-child(1) {
   top: 48px;
   -webkit-transform: rotate(45deg);
@@ -721,11 +668,11 @@ nav {
   transform: rotate(45deg);
   transition: top .3s, transform .3s .3s;
 }
-/* line 114, sass/modules/_modules.scss */
+/* line 77, sass/modules/_navigation.scss */
 #nav-icon.open span:nth-child(2) {
   opacity: 0;
 }
-/* line 119, sass/modules/_modules.scss */
+/* line 82, sass/modules/_navigation.scss */
 #nav-icon.open span:nth-child(3) {
   top: 48px;
   -webkit-transform: rotate(-45deg);
@@ -735,24 +682,24 @@ nav {
   transition: top .3s, transform .3s .3s;
 }
 
-/* line 131, sass/modules/_modules.scss */
+/* line 94, sass/modules/_navigation.scss */
 .sidr {
   background-color: #a42126;
 }
-/* line 134, sass/modules/_modules.scss */
+/* line 97, sass/modules/_navigation.scss */
 .sidr .sidr-close {
   display: block;
   color: white;
 }
-/* line 140, sass/modules/_modules.scss */
+/* line 103, sass/modules/_navigation.scss */
 .sidr li {
   list-style-type: none;
 }
-/* line 144, sass/modules/_modules.scss */
+/* line 107, sass/modules/_navigation.scss */
 .sidr ul {
   margin-top: 50px;
 }
-/* line 146, sass/modules/_modules.scss */
+/* line 109, sass/modules/_navigation.scss */
 .sidr ul > li {
   border-bottom: 1px solid white;
   padding: 20px 0 20px 20px;
@@ -760,17 +707,17 @@ nav {
   background-position: 95% center;
   position: relative;
 }
-/* line 156, sass/modules/_modules.scss */
+/* line 119, sass/modules/_navigation.scss */
 .sidr ul > li.current-menu-item > a {
   color: white;
   text-decoration: underline;
 }
-/* line 163, sass/modules/_modules.scss */
+/* line 126, sass/modules/_navigation.scss */
 .sidr ul > li.current_page_parent > a {
   color: white;
   text-decoration: underline;
 }
-/* line 169, sass/modules/_modules.scss */
+/* line 132, sass/modules/_navigation.scss */
 .sidr ul > li .open {
   position: absolute;
   right: 0px;
@@ -778,18 +725,18 @@ nav {
   z-index: 99999999;
   cursor: pointer;
 }
-/* line 176, sass/modules/_modules.scss */
+/* line 139, sass/modules/_navigation.scss */
 .sidr ul > li a {
   color: white;
   font-size: 17px;
   text-transform: none;
 }
-/* line 180, sass/modules/_modules.scss */
+/* line 143, sass/modules/_navigation.scss */
 .sidr ul > li a:hover {
   color: white;
   text-decoration: underline;
 }
-/* line 185, sass/modules/_modules.scss */
+/* line 148, sass/modules/_navigation.scss */
 .sidr ul > li ul.sub-menu {
   display: none;
   margin: 0;
@@ -798,24 +745,24 @@ nav {
   padding-top: 20px;
   border-top: 1px solid  white;
 }
-/* line 194, sass/modules/_modules.scss */
+/* line 157, sass/modules/_navigation.scss */
 .sidr ul > li ul.sub-menu li {
   background: none;
   border: none;
   padding: 3px 0 3px 20px;
   margin: 0;
 }
-/* line 202, sass/modules/_modules.scss */
+/* line 165, sass/modules/_navigation.scss */
 .sidr ul > li ul.sub-menu li.current-menu-item > a {
   color: white;
   text-decoration: underline;
 }
-/* line 209, sass/modules/_modules.scss */
+/* line 172, sass/modules/_navigation.scss */
 .sidr ul > li ul.sub-menu li.current_page_parent > a {
   color: white;
   text-decoration: underline;
 }
-/* line 215, sass/modules/_modules.scss */
+/* line 178, sass/modules/_navigation.scss */
 .sidr ul > li ul.sub-menu li a {
   color: white;
   font-size: 14px;
@@ -824,25 +771,32 @@ nav {
   text-transform: none;
 }
 
-/* line 232, sass/modules/_modules.scss */
+/* line 2, sass/modules/_modules.scss */
 .logo {
-  position: relative;
+  position: absolute;
+  top: 0;
   z-index: 10;
   padding: 30px 0 0 0;
+  max-width: 230px;
+}
+/* line 3, sass/modules/_modules.scss */
+.logo img {
+  max-width: 100%;
 }
 
-/* line 238, sass/modules/_modules.scss */
+/* line 15, sass/modules/_modules.scss */
 .home-callout {
   font-size: 7.2rem;
   line-height: 1.17;
   color: white;
-  border-bottom: 3px solid #a42126;
+  font-weight: 400;
+  border-bottom: 4px solid #a42126;
   margin-top: 21.5rem;
-  font-style: italic;
+  text-transform: uppercase;
 }
 
-/* line 248, sass/modules/_modules.scss */
-.homepage-bg {
+/* line 26, sass/modules/_modules.scss */
+.full-bg {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -852,4 +806,111 @@ nav {
   width: 100%;
   top: 0px;
   z-index: 1;
+}
+
+/* line 39, sass/modules/_modules.scss */
+main {
+  background-color: #a42126;
+}
+
+/* line 47, sass/modules/_modules.scss */
+.landing-block {
+  position: relative;
+  height: 50vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* line 56, sass/modules/_modules.scss */
+.landing-block img {
+  display: block;
+}
+
+/* line 60, sass/modules/_modules.scss */
+.landing-block .hover-text {
+  opacity: 0;
+  display: table;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  padding: 0px;
+  color: #ffffff;
+  background: #a42126;
+  text-decoration: none;
+  text-align: center;
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  transition: opacity 500ms;
+  padding: 40px 25px 30px 25px;
+}
+/* line 79, sass/modules/_modules.scss */
+.landing-block .hover-text a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+/* line 82, sass/modules/_modules.scss */
+.landing-block .hover-text a:hover {
+  text-decoration: none;
+  border-bottom: 1px solid white;
+}
+/* line 89, sass/modules/_modules.scss */
+.landing-block .hover-text.show-text {
+  opacity: 1;
+}
+
+/* line 94, sass/modules/_modules.scss */
+.landing-block:hover .hover-text {
+  opacity: 1;
+  background-color: #a42126;
+  z-index: 100;
+}
+
+/* line 100, sass/modules/_modules.scss */
+.sub-text {
+  display: block;
+  width: 100%;
+  font-size: 2.8rem;
+  line-height: 1.143;
+  color: #FFFFFF;
+  font-weight: 100;
+}
+
+/* line 108, sass/modules/_modules.scss */
+.large-text {
+  font-size: 6.4rem;
+  line-height: 1.1875;
+  font-weight: 100;
+}
+
+/* line 116, sass/modules/_modules.scss */
+.project-block {
+  display: table;
+  color: #FFFFFF;
+  background-color: #a42126;
+  height: calc(50vh);
+  margin-top: calc(25vh);
+  margin-bottom: calc(25vh);
+  padding: 25px;
+}
+
+/* line 127, sass/modules/_modules.scss */
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* line 131, sass/modules/_modules.scss */
+.white-bg {
+  background-color: white;
+}
+
+/* line 135, sass/modules/_modules.scss */
+.project-content {
+  margin-top: calc(100vh);
+  padding: 20px 0 20px 0;
 }

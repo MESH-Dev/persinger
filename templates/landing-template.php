@@ -3,73 +3,83 @@
  */
 ?>
 <?php get_header(); 
-
-    $image = get_field('background_image');
+ 
 ?>
 
-<main id="content" class="homepage-bg" style="background-image: url('<?php echo $image['sizes']['background-fullscreen'] ?>');">
+<main id="content">
+ 	<div class="landing-wrapper">
 
-	<div class="container">
-		<div class="row">
-			<div class="nine columns">
-				<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+	<?php 
+	if( have_rows('item_block') ){
+		$counter = 0;
 
-					<h1><?php the_title(); ?></h1>
-
-					<?php the_content(); ?>
-
-				<?php endwhile; ?>
-			</div>
-
+		while ( have_rows('item_block') ){
+			the_row();
+			$title = get_sub_field('title');
+			$sub_text = get_sub_field('sub_text');
+			$page_link = get_sub_field('page_link');
+			$image = get_sub_field('image');
  
 
-		</div>
-	</div>
+			//open row div
+			if($counter % 3 == 0)
+				echo "<div class='row'>"; ?>
 
+			<div class="columns-4 no-padding">
+				<div class="landing-block " style="background-image: url('<?php echo $image['sizes']['background-fullscreen'] ?>')">
+			   	 	<div class="hover-text large-text">
+			   	 		<div class="middle">
+				   	 		<a href="<?php echo $page_link; ?>"><?php echo $title; ?></a>
+				   			<span class="sub-text"><?php echo $sub_text; ?></span>
+			   			</div>
+			   	 	</div>
+			   		
+				</div>
+			</div>
+
+
+			<?php 
+			//wrap every three article in a row
+			if($counter % 3 == 2)
+				echo "</div>"; 
+				
+			
+
+		} 
+
+		$final_block_text = get_field('final_block_text');
+		$final_block_link = get_field('final_block_link');
+
+
+		?>
+
+		
+		<div class="columns-4 no-padding">
+			<div class="landing-block " >
+		   	 	<div class="large-text hover-text show-text">
+		   	 		<a href="<?php echo $final_block_link; ?>"><?php echo $final_block_text; ?></a> 
+		   	 	</div>
+		   		
+			</div>
+		</div>
+		<?php 
+		
+		if($counter % 3 == 2)
+				echo "</div>"; 
+		$counter++; 
+		
+		//close out final row div
+		if($counter %3 != 0) 
+			echo "</div>"; 
+			
+	}
+
+	?>
+
+ 		
+ 	</div>
+ 
 </main><!-- End of Content -->
 
 <?php get_footer(); ?>
-
-
-
-
-<div class="row">	
-		<div class="columns-4 no-padding">
-			<div class="landing-block">
-		   		<img src="http://lorempixel.com/900/900/" alt="" />
-		   		<a href="http://google.com" class="hover-text">Link</a>
-			</div>
-		</div>
-		<div class="columns-4 no-padding">
-			<div class="landing-block">
-		   		<img src="http://lorempixel.com/900/900/" alt="" />
-		   		<a href="http://google.com" class="hover-text">Link</a>
-			</div>
-		</div>
-		<div class="columns-4 no-padding">
-			<div class="landing-block">
-		   		<img src="http://lorempixel.com/900/900/" alt="" />
-		   		<a href="http://google.com" class="hover-text">Link</a>
-			</div>
-		</div>
-	</div>	
-	<div class="row">	
-		<div class="columns-4 no-padding">
-			<div class="landing-block">
-		   		<img src="http://lorempixel.com/900/900/" alt="" />
-		   		<a href="http://google.com" class="hover-text">Link</a>
-			</div>
-		</div>
-		<div class="columns-4 no-padding">
-			<div class="landing-block">
-		   		<img src="http://lorempixel.com/900/900/" alt="" />
-		   		<a href="http://google.com" class="hover-text">Link</a>
-			</div>
-		</div>
-		<div class="columns-4 no-padding">
-			<div class="landing-block">
-		   		<img src="http://lorempixel.com/900/900/" alt="" />
-		   		<a href="http://google.com" class="hover-text">Link</a>
-			</div>
-		</div>
-	</div>
+ 
