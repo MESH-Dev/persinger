@@ -28,7 +28,7 @@ $('.sidr-trigger').sidr({
 
 
 //If sidr menu item has a .sub-menu (children), append the open button
- $('.sidr ul.menu > li').has('.sub-menu').append('<div class="open"><i class="fa fa-fw fa-angle-down fa-3x"></i></div>');
+ $('.sidr ul.menu > li').has('.sub-menu').append('<div class="open"><i class="fa fa-fw fa-angle-down fa-2x"></i></div>');
 
 //This handles the open/close function on the nav
 //One click opens, 2nd click closes

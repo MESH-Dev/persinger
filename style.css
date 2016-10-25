@@ -599,7 +599,7 @@ nav {
   display: none;
 }
 
-/* line 4, sass/modules/_navigation.scss */
+/* line 5, sass/modules/_navigation.scss */
 #nav-icon {
   width: 100px;
   height: 100px;
@@ -619,7 +619,7 @@ nav {
   transition: .5s ease-in-out;
   cursor: pointer;
 }
-/* line 23, sass/modules/_navigation.scss */
+/* line 24, sass/modules/_navigation.scss */
 #nav-icon span {
   display: block;
   position: absolute;
@@ -637,29 +637,29 @@ nav {
   -o-transition: .25s ease-in-out;
   transition: .25s ease-in-out;
 }
-/* line 42, sass/modules/_navigation.scss */
+/* line 43, sass/modules/_navigation.scss */
 #nav-icon span:nth-child(1) {
   top: 40px;
   width: 20px;
 }
-/* line 46, sass/modules/_navigation.scss */
+/* line 47, sass/modules/_navigation.scss */
 #nav-icon span:nth-child(2) {
   top: 48px;
   width: 25px;
 }
-/* line 51, sass/modules/_navigation.scss */
+/* line 52, sass/modules/_navigation.scss */
 #nav-icon span:nth-child(3) {
   top: 56px;
 }
-/* line 55, sass/modules/_navigation.scss */
+/* line 56, sass/modules/_navigation.scss */
 #nav-icon:hover span {
   width: 30px;
 }
-/* line 58, sass/modules/_navigation.scss */
+/* line 59, sass/modules/_navigation.scss */
 #nav-icon.open span {
   width: 30px;
 }
-/* line 67, sass/modules/_navigation.scss */
+/* line 68, sass/modules/_navigation.scss */
 #nav-icon.open span:nth-child(1) {
   top: 48px;
   -webkit-transform: rotate(45deg);
@@ -668,11 +668,11 @@ nav {
   transform: rotate(45deg);
   transition: top .3s, transform .3s .3s;
 }
-/* line 77, sass/modules/_navigation.scss */
+/* line 78, sass/modules/_navigation.scss */
 #nav-icon.open span:nth-child(2) {
   opacity: 0;
 }
-/* line 82, sass/modules/_navigation.scss */
+/* line 83, sass/modules/_navigation.scss */
 #nav-icon.open span:nth-child(3) {
   top: 48px;
   -webkit-transform: rotate(-45deg);
@@ -682,90 +682,99 @@ nav {
   transition: top .3s, transform .3s .3s;
 }
 
-/* line 94, sass/modules/_navigation.scss */
+/* line 95, sass/modules/_navigation.scss */
 .sidr {
   background-color: #a42126;
+  width: 400px;
 }
-/* line 97, sass/modules/_navigation.scss */
+/* line 99, sass/modules/_navigation.scss */
 .sidr .sidr-close {
   display: block;
   color: white;
 }
-/* line 103, sass/modules/_navigation.scss */
+/* line 105, sass/modules/_navigation.scss */
 .sidr li {
   list-style-type: none;
 }
-/* line 107, sass/modules/_navigation.scss */
-.sidr ul {
-  margin-top: 50px;
-}
 /* line 109, sass/modules/_navigation.scss */
+.sidr ul {
+  margin-top: 95px;
+  margin-left: 30px;
+}
+/* line 112, sass/modules/_navigation.scss */
 .sidr ul > li {
-  border-bottom: 1px solid white;
-  padding: 20px 0 20px 20px;
+  font-size: 3.2rem;
+  line-height: 1.2rem;
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 100;
+  padding: 20px 0 40px 00px;
   background-repeat: no-repeat;
-  background-position: 95% center;
   position: relative;
 }
-/* line 119, sass/modules/_navigation.scss */
+/* line 123, sass/modules/_navigation.scss */
 .sidr ul > li.current-menu-item > a {
-  color: white;
+  color: #FFFFFF;
   text-decoration: underline;
 }
-/* line 126, sass/modules/_navigation.scss */
+/* line 130, sass/modules/_navigation.scss */
 .sidr ul > li.current_page_parent > a {
   color: white;
   text-decoration: underline;
 }
-/* line 132, sass/modules/_navigation.scss */
+/* line 136, sass/modules/_navigation.scss */
 .sidr ul > li .open {
   position: absolute;
-  right: 0px;
-  top: 9px;
+  right: 50px;
+  top: 0px;
   z-index: 99999999;
   cursor: pointer;
-}
-/* line 139, sass/modules/_navigation.scss */
-.sidr ul > li a {
   color: white;
-  font-size: 17px;
-  text-transform: none;
 }
 /* line 143, sass/modules/_navigation.scss */
-.sidr ul > li a:hover {
-  color: white;
-  text-decoration: underline;
+.sidr ul > li .open i {
+  font-size: 1.6em;
 }
-/* line 148, sass/modules/_navigation.scss */
+/* line 147, sass/modules/_navigation.scss */
+.sidr ul > li a {
+  color: #FFFFFF;
+  text-transform: none;
+  border-bottom: none;
+  text-decoration: none;
+}
+/* line 152, sass/modules/_navigation.scss */
+.sidr ul > li a:hover {
+  color: #FFFFFF;
+  border-bottom: 1px solid #FFFFFF;
+}
+/* line 157, sass/modules/_navigation.scss */
 .sidr ul > li ul.sub-menu {
   display: none;
   margin: 0;
   margin-top: 20px;
-  margin-left: -20px;
-  padding-top: 20px;
-  border-top: 1px solid  white;
+  margin-left: -40px;
+  padding-top: 0px;
 }
-/* line 157, sass/modules/_navigation.scss */
+/* line 164, sass/modules/_navigation.scss */
 .sidr ul > li ul.sub-menu li {
   background: none;
   border: none;
-  padding: 3px 0 3px 20px;
+  padding: 10px 0 20px 0;
   margin: 0;
+  font-size: 1.4rem;
 }
-/* line 165, sass/modules/_navigation.scss */
+/* line 173, sass/modules/_navigation.scss */
 .sidr ul > li ul.sub-menu li.current-menu-item > a {
   color: white;
   text-decoration: underline;
 }
-/* line 172, sass/modules/_navigation.scss */
+/* line 180, sass/modules/_navigation.scss */
 .sidr ul > li ul.sub-menu li.current_page_parent > a {
   color: white;
   text-decoration: underline;
 }
-/* line 178, sass/modules/_navigation.scss */
+/* line 186, sass/modules/_navigation.scss */
 .sidr ul > li ul.sub-menu li a {
   color: white;
-  font-size: 14px;
   text-transform: uppercase;
   padding-bottom: 5px;
   text-transform: none;
