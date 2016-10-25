@@ -122,14 +122,14 @@ nav{display:none;}
             &.current-menu-item{
                         > a{
                             color: $white;
-                            text-decoration: underline;
+                            border-bottom: 1px solid $white;
                         }
                     }
 
             &.current_page_parent{
                 >a{
                     color: white;
-                    text-decoration:underline;
+                    border-bottom: 1px solid $white;
                 }
             }
 
@@ -158,7 +158,7 @@ nav{display:none;}
                 display:none;
                 margin:0;
                 margin-top:20px;
-                margin-left:-40px;
+                margin-left:0px;
                 padding-top:0px;
 
                 li{
@@ -172,14 +172,14 @@ nav{display:none;}
                     &.current-menu-item{
                         > a{
                             color:white;
-                            text-decoration:underline;
+                            border-bottom: 1px solid $white;
                         }
                     }
 
                     &.current_page_parent{
                         >a{
                             color:white;
-                            text-decoration:underline;
+                            border-bottom: 1px solid $white;
                         }
                     }
 

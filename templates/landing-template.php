@@ -57,7 +57,9 @@
 		<div class="columns-4 no-padding">
 			<div class="landing-block " >
 		   	 	<div class="large-text hover-text show-text">
-		   	 		<a href="<?php echo $final_block_link; ?>"><?php echo $final_block_text; ?></a> 
+		   	 		<div class="middle">
+		   	 			<a href="<?php echo $final_block_link; ?>"><?php echo $final_block_text; ?></a> 
+		   	 		</div>
 		   	 	</div>
 		   		
 			</div>

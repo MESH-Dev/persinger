@@ -36,22 +36,22 @@
 
 <body <?php body_class(); ?> >
  
-
+<div class="wrapper">
 	<header>
 		<div class="container">
 
 			<div class="columns-8 offset-by-1">
 				<div class="logo">
-					 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"> <img src="<?php bloginfo( 'template_url' ); ?>/img/logo.png" alt=""></a></h1>
+					 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"> <img src="<?php bloginfo( 'template_url' ); ?>/img/logo.png" alt=""></a> 
 				</div>
 				
 			</div>
 		</div>	 
-				<div id="nav-icon" class="sidr-trigger" >
-				  <span></span>
-				  <span></span>
-				  <span></span>
-				</div>
+		<div id="nav-icon" class="sidr-trigger" >
+		  <span></span>
+		  <span></span>
+		  <span></span>
+		</div>
 
 			 
 			<nav class="main-navigation">

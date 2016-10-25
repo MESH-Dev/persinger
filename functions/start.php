@@ -4,6 +4,7 @@
 function loadup_scripts() {
 	wp_enqueue_script( 'theme-js', get_template_directory_uri().'/js/mesh.js', array('jquery'), '1.0.0', true );
     wp_enqueue_script( 'sidr', get_template_directory_uri().'/js/jquery.sidr.min.js', array('jquery'), '1.0.0', true );
+    wp_enqueue_script( 'parrallax', get_template_directory_uri().'/js/parrallax.min.js', array('jquery'), '1.0.0', true );
     wp_enqueue_style( 'sidr-style', get_template_directory_uri().'/css/jquery.sidr.bare.css', '1.0.0', true );
     wp_enqueue_style( 'fontawesome', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css', '1.0.0', true );
 
@@ -13,6 +14,7 @@ add_action( 'wp_enqueue_scripts', 'loadup_scripts' );
 // Add Thumbnail Theme Support
 add_theme_support('post-thumbnails');
 add_image_size('background-fullscreen', 1800, 1200, true);
+add_image_size('background-halfscreen', 1000, 1000, true);
 add_image_size('short-banner', 1800, 800, true);
 
 add_image_size('large', 700, '', true); // Large Thumbnail

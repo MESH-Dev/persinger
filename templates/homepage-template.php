@@ -9,11 +9,12 @@
     $callout = get_field('callout_text');
 ?>
 
+
 <main id="content" class="full-bg" style="background-image: url('<?php echo $image['sizes']['background-fullscreen'] ?>');">
 
 	<div class="container">
 		<div class="row">
-			<div class="columns-6">
+			<div class="columns-6 offset-by-1">
 				<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
 			 	<div class="home-callout">
