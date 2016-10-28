@@ -13,7 +13,7 @@
 
 		<div class="container">
 			<div class="row">
-				<div class="columns-4 offset-by-1">
+				<div class="columns-11 offset-by-1">
 					<div class="project-block">
 						<div class="middle">
 							<h1 class="large-text"><?php the_title(); ?> </h1>
@@ -29,13 +29,14 @@
 			 
 		</div>
 
-		<div class="arrow-down">
-					<a href="#project-content"><i class="fa fa-fw fa-angle-down fa-2x"></i></a>
-				</div>
+		
 
 		
 	</div>
 <main id="content">
+	<div class="arrow-down">
+		<a href="#project-content"><i class="fa fa-fw fa-angle-down fa-2x"></i></a>
+	</div>
 	<div class="white-bg">
 		<div id="project-content" class="container project-content">
 			<div class="row">

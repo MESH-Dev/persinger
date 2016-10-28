@@ -581,31 +581,43 @@ p {
   margin-left: 100%;
 }
 
-/* line 67, sass/base/_grid.scss */
+@media (max-width: 1060px) {
+  /* line 67, sass/base/_grid.scss */
+  .landing-wrapper .columns-4 {
+    width: 50%;
+  }
+}
+@media (max-width: 750px) {
+  /* line 67, sass/base/_grid.scss */
+  .landing-wrapper .columns-4 {
+    width: 100%;
+  }
+}
+
+/* line 81, sass/base/_grid.scss */
 [class*='columns-'] {
   float: left;
   padding-right: 20px;
 }
-/* line 71, sass/base/_grid.scss */
+/* line 85, sass/base/_grid.scss */
 .row [class*='columns-']:last-of-type {
   padding-right: 0;
 }
 @media (max-width: 750px) {
-  /* line 67, sass/base/_grid.scss */
+  /* line 81, sass/base/_grid.scss */
   [class*='columns-'] {
     width: 100%;
-    padding: 0 5% 0 5%;
   }
 }
 
 @media (max-width: 750px) {
-  /* line 82, sass/base/_grid.scss */
+  /* line 96, sass/base/_grid.scss */
   [class*='offset-by-'] {
     margin-left: 0;
   }
 }
 
-/* line 93, sass/base/_grid.scss */
+/* line 107, sass/base/_grid.scss */
 .no-padding {
   padding-right: 0;
 }
@@ -667,7 +679,7 @@ nav {
   width: 100px;
   height: 100px;
   float: right;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   z-index: 9999999;
@@ -855,8 +867,14 @@ nav {
 .logo img {
   max-width: 100%;
 }
+@media (max-width: 750px) {
+  /* line 2, sass/modules/_modules.scss */
+  .logo {
+    padding: 30px 0 0 5%;
+  }
+}
 
-/* line 15, sass/modules/_modules.scss */
+/* line 19, sass/modules/_modules.scss */
 .home-callout {
   font-size: 7.2rem;
   line-height: 1.17;
@@ -867,7 +885,7 @@ nav {
   text-transform: uppercase;
 }
 
-/* line 26, sass/modules/_modules.scss */
+/* line 30, sass/modules/_modules.scss */
 .full-bg {
   background-repeat: no-repeat;
   background-position: center;
@@ -880,12 +898,7 @@ nav {
   z-index: 1;
 }
 
-/* line 39, sass/modules/_modules.scss */
-main {
-  background-color: #a42126;
-}
-
-/* line 47, sass/modules/_modules.scss */
+/* line 46, sass/modules/_modules.scss */
 .landing-block {
   position: relative;
   height: 50vh;
@@ -894,12 +907,12 @@ main {
   background-size: cover;
 }
 
-/* line 56, sass/modules/_modules.scss */
+/* line 55, sass/modules/_modules.scss */
 .landing-block img {
   display: block;
 }
 
-/* line 60, sass/modules/_modules.scss */
+/* line 59, sass/modules/_modules.scss */
 .landing-block .hover-text {
   opacity: 0;
   display: table;
@@ -920,29 +933,29 @@ main {
   transition: opacity 500ms;
   padding: 40px 25px 30px 25px;
 }
-/* line 79, sass/modules/_modules.scss */
+/* line 78, sass/modules/_modules.scss */
 .landing-block .hover-text a {
   color: #FFFFFF;
   text-decoration: none;
 }
-/* line 82, sass/modules/_modules.scss */
+/* line 81, sass/modules/_modules.scss */
 .landing-block .hover-text a:hover {
   text-decoration: none;
   border-bottom: 1px solid white;
 }
-/* line 89, sass/modules/_modules.scss */
+/* line 88, sass/modules/_modules.scss */
 .landing-block .hover-text.show-text {
   opacity: 1;
 }
 
-/* line 94, sass/modules/_modules.scss */
+/* line 93, sass/modules/_modules.scss */
 .landing-block:hover .hover-text {
   opacity: 1;
   background-color: #a42126;
   z-index: 100;
 }
 
-/* line 100, sass/modules/_modules.scss */
+/* line 99, sass/modules/_modules.scss */
 .sub-text {
   display: block;
   width: 100%;
@@ -952,77 +965,93 @@ main {
   font-weight: 100;
 }
 
-/* line 108, sass/modules/_modules.scss */
+/* line 107, sass/modules/_modules.scss */
 .large-text {
   font-size: 6.4rem;
   line-height: 1.1875;
   font-weight: 100;
 }
 
-/* line 117, sass/modules/_modules.scss */
+/* line 116, sass/modules/_modules.scss */
 .parrallax-bg {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   position: relative;
+  height: calc(100vh);
 }
 
 /* line 127, sass/modules/_modules.scss */
 .project-block {
   display: table;
   color: #FFFFFF;
+  width: 390px;
   background-color: #a42126;
-  height: calc(50vh);
+  height: 390px;
   margin-top: calc(25vh);
-  margin-bottom: calc(25vh);
   padding: 25px;
 }
+@media (max-width: 750px) {
+  /* line 127, sass/modules/_modules.scss */
+  .project-block {
+    width: 350px;
+    height: 350px;
+    margin-left: 5%;
+  }
+}
 
-/* line 138, sass/modules/_modules.scss */
+/* line 144, sass/modules/_modules.scss */
 .middle {
   display: table-cell;
   vertical-align: middle;
 }
 
-/* line 142, sass/modules/_modules.scss */
+/* line 148, sass/modules/_modules.scss */
 .arrow-down {
   margin: 0 auto;
   width: 100%;
   font-size: 40px;
   text-align: center;
-  top: -130px;
+  top: -80px;
   position: relative;
 }
-/* line 151, sass/modules/_modules.scss */
+/* line 157, sass/modules/_modules.scss */
 .arrow-down a {
   color: white;
 }
-/* line 154, sass/modules/_modules.scss */
+/* line 160, sass/modules/_modules.scss */
 .arrow-down a:hover {
   text-decoration: none;
   color: white;
   opacity: 0.7;
 }
 
-/* line 163, sass/modules/_modules.scss */
+/* line 169, sass/modules/_modules.scss */
 .white-bg {
   background-color: white;
   margin-bottom: 60px;
 }
 
-/* line 168, sass/modules/_modules.scss */
+/* line 174, sass/modules/_modules.scss */
 .project-content {
   padding: 20px 0 20px 0;
 }
+@media (max-width: 750px) {
+  /* line 174, sass/modules/_modules.scss */
+  .project-content {
+    margin-top: 30px;
+    padding: 20px 5% 20px 5%;
+  }
+}
 
-/* line 173, sass/modules/_modules.scss */
+/* line 183, sass/modules/_modules.scss */
 .project-info h3 {
   color: black;
   font-size: 2.4em;
   line-height: 1.3;
 }
 
-/* line 179, sass/modules/_modules.scss */
+/* line 189, sass/modules/_modules.scss */
 .photos-half, .photos-full {
   float: left;
   width: 100%;
@@ -1033,7 +1062,12 @@ main {
   position: relative;
 }
 
-/* line 194, sass/modules/_modules.scss */
+/* line 199, sass/modules/_modules.scss */
+.photos-full {
+  height: 700px;
+}
+
+/* line 208, sass/modules/_modules.scss */
 .half-bg {
   background-repeat: no-repeat;
   display: block;
@@ -1048,7 +1082,7 @@ main {
   z-index: 1;
 }
 @media (max-width: 750px) {
-  /* line 194, sass/modules/_modules.scss */
+  /* line 208, sass/modules/_modules.scss */
   .half-bg {
     position: relative;
     height: 60vh;
@@ -1056,54 +1090,103 @@ main {
   }
 }
 
-/* line 216, sass/modules/_modules.scss */
+/* line 230, sass/modules/_modules.scss */
 .page-content {
   background-color: #FFFFFF;
   margin-top: 120px;
   z-index: 0;
   margin-bottom: 120px;
 }
-/* line 223, sass/modules/_modules.scss */
+/* line 237, sass/modules/_modules.scss */
 .page-content h1 {
   font-size: 2.4rem;
   line-height: 1.2;
   margin-bottom: 1.6rem;
 }
 @media (max-width: 750px) {
-  /* line 216, sass/modules/_modules.scss */
+  /* line 230, sass/modules/_modules.scss */
   .page-content {
     margin-top: 30px;
+    padding: 0 5% 0 5%;
   }
 }
 
-/* line 237, sass/modules/_modules.scss */
+/* line 252, sass/modules/_modules.scss */
 .align-right {
   text-align: right;
+  padding-right: 10px;
 }
 
-/* line 240, sass/modules/_modules.scss */
+/* line 256, sass/modules/_modules.scss */
 .site-footer {
   width: 100%;
-  height: 40px;
+  height: 30px;
   background-color: #a42126;
   z-index: 1000000000;
-  padding: 10px 0 0 0;
+  padding: 15px 0 0 0;
   color: white;
   margin-top: 0px;
   clear: both;
-  position: fixed;
+  position: relative;
   bottom: 0;
+  height: 100%;
 }
-/* line 257, sass/modules/_modules.scss */
+/* line 271, sass/modules/_modules.scss */
 .site-footer i {
   padding-right: 10px;
 }
-/* line 262, sass/modules/_modules.scss */
+/* line 275, sass/modules/_modules.scss */
 .site-footer a {
   color: white;
 }
-/* line 264, sass/modules/_modules.scss */
+/* line 277, sass/modules/_modules.scss */
 .site-footer a:hover {
   opacity: 0.5;
   color: white;
 }
+@media (max-width: 750px) {
+  /* line 256, sass/modules/_modules.scss */
+  .site-footer {
+    padding: 10px 5% 0 5%;
+    text-align: center;
+    height: 100%;
+  }
+  /* line 287, sass/modules/_modules.scss */
+  .site-footer .align-right {
+    margin-top: 8px;
+    text-align: center;
+  }
+}
+
+/* line 294, sass/modules/_modules.scss */
+.home-footer {
+  margin-top: 100vh;
+}
+
+/* line 298, sass/modules/_modules.scss */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+/* line 306, sass/modules/_modules.scss */
+.clearfix {
+  display: inline-block;
+}
+
+/* start commented backslash hack \*/
+/* line 308, sass/modules/_modules.scss */
+* html .clearfix {
+  height: 1%;
+}
+
+/* line 309, sass/modules/_modules.scss */
+.clearfix {
+  display: block;
+}
+
+/* close commented backslash hack */

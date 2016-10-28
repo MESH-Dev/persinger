@@ -64,6 +64,20 @@ $max-width: 1200px;
 .offset-by-11 { margin-left: grid-column-width(11); }
 .offset-by-12 { margin-left: grid-column-width(12); }
 
+.landing-wrapper .columns-4 {
+	@media($bp-smaller-than-desktop) {
+	    width: 50%;
+ 
+	}
+	@media($bp-smaller-than-tablet) {
+	    width: 100%;
+	  
+	}
+}
+
+
+
+
 [class*='columns-'] {
 	float: left;
 	padding-right: $pad;
@@ -74,7 +88,7 @@ $max-width: 1200px;
 
 	@media($bp-smaller-than-tablet) {
 	    width: 100%;
-	    padding: 0 5% 0 5%;
+	  
 	}
  
 }
