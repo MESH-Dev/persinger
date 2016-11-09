@@ -14,7 +14,7 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="columns-6 offset-by-1">
+			<div class="columns-6">
 				<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
 			 	<div class="home-callout">

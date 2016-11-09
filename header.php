@@ -31,15 +31,24 @@
 	<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
 
 	<?php wp_head(); ?>
+<!-- !!BUGHERD _ REMOVE AT LAUNCH!! -->
+	<script type='text/javascript'>
+(function (d, t) {
+  var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
+  bh.type = 'text/javascript';
+  bh.src = 'https://www.bugherd.com/sidebarv2.js?apikey=wunfjcte43bmtdl483vb9a';
+  s.parentNode.insertBefore(bh, s);
+  })(document, 'script');
+</script>
 
 </head>
 
 <body <?php body_class(); ?> >
- 
+<div class="page-wrap">
 	<header>
 		<div class="container">
 
-			<div class="columns-8 offset-by-1">
+			<div class="columns-8">
 				<div class="logo">
 					 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"> <img src="<?php bloginfo( 'template_url' ); ?>/img/logo.png" alt=""></a> 
 				</div>

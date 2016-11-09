@@ -13,7 +13,7 @@
 //========= VARIABLES =============
 //=================================
 
-$pad: 20px;
+$pad: 15px;
 $max-width: 1200px;
 
 //=================================
@@ -34,7 +34,7 @@ $max-width: 1200px;
 		clear: both;
   }
   &.padding-bottom{
-  	margin-bottom: 20px; 
+  	margin-bottom: $pad; 
   }
 }
  
@@ -88,6 +88,7 @@ $max-width: 1200px;
 
 	@media($bp-smaller-than-tablet) {
 	    width: 100%;
+	    padding: 0;
 	  
 	}
  

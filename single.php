@@ -34,16 +34,17 @@
 		
 	</div>
 <main id="content">
-	<div class="arrow-down">
-		<a href="#project-content"><i class="fa fa-fw fa-angle-down fa-2x"></i></a>
-	</div>
-	<div class="white-bg">
+		<div class="white-bg">
+		<div class="arrow-down">
+			<a href="#project-content"><img src="<?php bloginfo( 'template_url' ); ?>/img/arrow-dn.png" alt=""></a>
+		</div>
+
 		<div id="project-content" class="container project-content">
 			<div class="row">
 				<div class="columns-4 offset-by-1">
 					<div class="project-info">
-						<h3><?php the_title(); ?></h3>
-						<h3><?php the_field('location')?></h3>
+						 
+						 <?php the_field('location')?> 
 				 
 					</div>
 				</div>
@@ -76,7 +77,7 @@
 
 					<div class="row padding-bottom">
 						<div class="columns-6 ">
-							<div class="photos-half" style="background-image: url('<?php echo $half_img_one['sizes']['background-halfscreen'] ?>');"></div>
+							<div class="photos-half first-half-photo" style="background-image: url('<?php echo $half_img_one['sizes']['background-halfscreen'] ?>');"></div>
 						</div>
 						<div class="columns-6 ">
 							<div class="photos-half" style="background-image: url('<?php echo $half_img_two['sizes']['background-halfscreen'] ?>');"></div>

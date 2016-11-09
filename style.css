@@ -427,9 +427,15 @@ h6 {
 p {
   font-size: 1.4rem;
   line-height: 1.428;
-  font-weight: 100;
+  font-weight: 400;
   margin-top: 0;
   margin-bottom: 1.8rem;
+}
+
+/* line 28, sass/base/_typography.scss */
+.page-content li, .project-info li {
+  list-style-type: circle;
+  margin-left: 20px;
 }
 
 /* line 3, sass/base/_grid.scss */
@@ -458,7 +464,7 @@ p {
 }
 /* line 36, sass/base/_grid.scss */
 .row.padding-bottom {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 /* line 41, sass/base/_grid.scss */
@@ -597,7 +603,7 @@ p {
 /* line 81, sass/base/_grid.scss */
 [class*='columns-'] {
   float: left;
-  padding-right: 20px;
+  padding-right: 15px;
 }
 /* line 85, sass/base/_grid.scss */
 .row [class*='columns-']:last-of-type {
@@ -607,17 +613,18 @@ p {
   /* line 81, sass/base/_grid.scss */
   [class*='columns-'] {
     width: 100%;
+    padding: 0;
   }
 }
 
 @media (max-width: 750px) {
-  /* line 96, sass/base/_grid.scss */
+  /* line 97, sass/base/_grid.scss */
   [class*='offset-by-'] {
     margin-left: 0;
   }
 }
 
-/* line 107, sass/base/_grid.scss */
+/* line 108, sass/base/_grid.scss */
 .no-padding {
   padding-right: 0;
 }
@@ -643,12 +650,6 @@ td:last-child {
 }
 
 /* line 4, sass/modules/_spacing.scss */
-button,
-.button {
-  margin-bottom: 1rem;
-}
-
-/* line 9, sass/modules/_spacing.scss */
 input,
 textarea,
 select,
@@ -656,17 +657,16 @@ fieldset {
   margin-bottom: 1.5rem;
 }
 
-/* line 16, sass/modules/_spacing.scss */
+/* line 11, sass/modules/_spacing.scss */
 pre,
 blockquote,
 dl,
 figure,
 table,
-p,
 ul,
 ol,
 form {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.0rem;
 }
 
 /* line 2, sass/modules/_navigation.scss */
@@ -694,7 +694,14 @@ nav {
   transition: .5s ease-in-out;
   cursor: pointer;
 }
-/* line 24, sass/modules/_navigation.scss */
+@media (max-width: 750px) {
+  /* line 5, sass/modules/_navigation.scss */
+  #nav-icon {
+    width: 75px;
+    height: 75px;
+  }
+}
+/* line 28, sass/modules/_navigation.scss */
 #nav-icon span {
   display: block;
   position: absolute;
@@ -712,44 +719,68 @@ nav {
   -o-transition: .25s ease-in-out;
   transition: .25s ease-in-out;
 }
-/* line 43, sass/modules/_navigation.scss */
+@media (max-width: 750px) {
+  /* line 28, sass/modules/_navigation.scss */
+  #nav-icon span {
+    left: 25px;
+  }
+}
+/* line 50, sass/modules/_navigation.scss */
 #nav-icon span:nth-child(1) {
   top: 40px;
   width: 20px;
 }
-/* line 47, sass/modules/_navigation.scss */
+@media (max-width: 750px) {
+  /* line 50, sass/modules/_navigation.scss */
+  #nav-icon span:nth-child(1) {
+    top: 27px;
+  }
+}
+/* line 57, sass/modules/_navigation.scss */
 #nav-icon span:nth-child(2) {
   top: 48px;
   width: 25px;
 }
-/* line 52, sass/modules/_navigation.scss */
+@media (max-width: 750px) {
+  /* line 57, sass/modules/_navigation.scss */
+  #nav-icon span:nth-child(2) {
+    top: 35px;
+  }
+}
+/* line 65, sass/modules/_navigation.scss */
 #nav-icon span:nth-child(3) {
   top: 56px;
 }
-/* line 56, sass/modules/_navigation.scss */
+@media (max-width: 750px) {
+  /* line 65, sass/modules/_navigation.scss */
+  #nav-icon span:nth-child(3) {
+    top: 43px;
+  }
+}
+/* line 73, sass/modules/_navigation.scss */
 #nav-icon:hover span {
   width: 30px;
 }
-/* line 59, sass/modules/_navigation.scss */
+/* line 76, sass/modules/_navigation.scss */
 #nav-icon.open span {
   width: 30px;
 }
-/* line 68, sass/modules/_navigation.scss */
+/* line 85, sass/modules/_navigation.scss */
 #nav-icon.open span:nth-child(1) {
-  top: 48px;
+  top: 35px;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
   transition: top .3s, transform .3s .3s;
 }
-/* line 78, sass/modules/_navigation.scss */
+/* line 95, sass/modules/_navigation.scss */
 #nav-icon.open span:nth-child(2) {
   opacity: 0;
 }
-/* line 83, sass/modules/_navigation.scss */
+/* line 100, sass/modules/_navigation.scss */
 #nav-icon.open span:nth-child(3) {
-  top: 48px;
+  top: 35px;
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
@@ -757,71 +788,95 @@ nav {
   transition: top .3s, transform .3s .3s;
 }
 
-/* line 95, sass/modules/_navigation.scss */
+/* line 110, sass/modules/_navigation.scss */
+span.menu-arrow-down {
+  width: 25px;
+  height: 15px;
+  background-image: url(img/menu-arrow-down.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  display: block;
+  top: 10px;
+  left: 134px;
+  transition: transform 300ms ease;
+}
+
+/* line 122, sass/modules/_navigation.scss */
+.rotate {
+  transform: rotate(-180deg);
+  transition: transform 300ms ease;
+}
+
+/* line 129, sass/modules/_navigation.scss */
+li#menu-item-127 span.menu-arrow-down {
+  left: 120px;
+}
+
+/* line 133, sass/modules/_navigation.scss */
+span.menu-arrow-right {
+  width: 14px;
+  height: 25px;
+  background-image: url(img/menu-arrow.png);
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+  top: 1px;
+  left: 12px;
+}
+
+/* line 146, sass/modules/_navigation.scss */
 .sidr {
   background-color: #a42126;
   width: 400px;
 }
-/* line 99, sass/modules/_navigation.scss */
+/* line 150, sass/modules/_navigation.scss */
 .sidr .sidr-close {
   display: block;
   color: white;
 }
-/* line 105, sass/modules/_navigation.scss */
+/* line 156, sass/modules/_navigation.scss */
 .sidr li {
   list-style-type: none;
 }
-/* line 109, sass/modules/_navigation.scss */
+/* line 160, sass/modules/_navigation.scss */
 .sidr ul {
   margin-top: 95px;
   margin-left: 30px;
 }
-/* line 112, sass/modules/_navigation.scss */
+/* line 163, sass/modules/_navigation.scss */
 .sidr ul > li {
   font-size: 3.2rem;
-  line-height: 1.2rem;
+  line-height: 3.2rem;
+  letter-spacing: .025em;
   font-family: "proxima-nova", sans-serif;
   font-weight: 100;
-  padding: 20px 0 40px 00px;
+  padding: 0px 0 40px 0px;
   background-repeat: no-repeat;
   position: relative;
 }
-/* line 123, sass/modules/_navigation.scss */
+/* line 175, sass/modules/_navigation.scss */
 .sidr ul > li.current-menu-item > a {
   color: #FFFFFF;
   border-bottom: 1px solid #FFFFFF;
 }
-/* line 130, sass/modules/_navigation.scss */
+/* line 182, sass/modules/_navigation.scss */
 .sidr ul > li.current_page_parent > a {
   color: white;
   border-bottom: 1px solid #FFFFFF;
 }
-/* line 136, sass/modules/_navigation.scss */
-.sidr ul > li .open {
-  position: absolute;
-  right: 50px;
-  top: 0px;
-  z-index: 99999999;
-  cursor: pointer;
-  color: white;
-}
-/* line 143, sass/modules/_navigation.scss */
-.sidr ul > li .open i {
-  font-size: 1.6em;
-}
-/* line 147, sass/modules/_navigation.scss */
+/* line 192, sass/modules/_navigation.scss */
 .sidr ul > li a {
   color: #FFFFFF;
   text-transform: none;
   border-bottom: none;
   text-decoration: none;
 }
-/* line 152, sass/modules/_navigation.scss */
+/* line 197, sass/modules/_navigation.scss */
 .sidr ul > li a:hover {
   color: #FFFFFF;
   border-bottom: 1px solid #FFFFFF;
 }
-/* line 157, sass/modules/_navigation.scss */
+/* line 202, sass/modules/_navigation.scss */
 .sidr ul > li ul.sub-menu {
   display: none;
   margin: 0;
@@ -829,39 +884,46 @@ nav {
   margin-left: 0px;
   padding-top: 0px;
 }
-/* line 164, sass/modules/_navigation.scss */
+/* line 209, sass/modules/_navigation.scss */
 .sidr ul > li ul.sub-menu li {
   background: none;
   border: none;
-  padding: 10px 0 20px 0;
+  padding: 0px 0 25px 0;
   margin: 0;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  max-width: 120px;
 }
-/* line 173, sass/modules/_navigation.scss */
+/* line 220, sass/modules/_navigation.scss */
 .sidr ul > li ul.sub-menu li.current-menu-item > a {
   color: white;
   border-bottom: 1px solid #FFFFFF;
 }
-/* line 180, sass/modules/_navigation.scss */
+/* line 227, sass/modules/_navigation.scss */
 .sidr ul > li ul.sub-menu li.current_page_parent > a {
   color: white;
   border-bottom: 1px solid #FFFFFF;
 }
-/* line 186, sass/modules/_navigation.scss */
+/* line 232, sass/modules/_navigation.scss */
+.sidr ul > li ul.sub-menu li:last-of-type {
+  padding: 0px 0 0px 0;
+}
+/* line 236, sass/modules/_navigation.scss */
 .sidr ul > li ul.sub-menu li a {
   color: white;
   text-transform: uppercase;
-  padding-bottom: 5px;
+  padding-bottom: 0px;
   text-transform: none;
 }
 
 /* line 2, sass/modules/_modules.scss */
 .logo {
-  position: absolute;
+  position: fixed;
   top: 0;
-  z-index: 10;
+  z-index: 10000000;
   padding: 30px 0 0 0;
   max-width: 230px;
+  left: 5%;
 }
 /* line 3, sass/modules/_modules.scss */
 .logo img {
@@ -877,15 +939,27 @@ nav {
 /* line 19, sass/modules/_modules.scss */
 .home-callout {
   font-size: 7.2rem;
-  line-height: 1.17;
+  line-height: 1.2;
   color: white;
-  font-weight: 400;
+  font-weight: 300;
+  letter-spacing: .05em;
   border-bottom: 4px solid #a42126;
   margin-top: 21.5rem;
   text-transform: uppercase;
+  position: absolute;
+  left: 5%;
+  max-width: 575px;
+}
+@media (max-width: 750px) {
+  /* line 19, sass/modules/_modules.scss */
+  .home-callout {
+    max-width: 355px;
+    font-size: 4.4rem;
+    margin-top: 24.5rem;
+  }
 }
 
-/* line 30, sass/modules/_modules.scss */
+/* line 39, sass/modules/_modules.scss */
 .full-bg {
   background-repeat: no-repeat;
   background-position: center;
@@ -898,7 +972,7 @@ nav {
   z-index: 1;
 }
 
-/* line 46, sass/modules/_modules.scss */
+/* line 55, sass/modules/_modules.scss */
 .landing-block {
   position: relative;
   height: 50vh;
@@ -906,13 +980,23 @@ nav {
   background-position: center;
   background-size: cover;
 }
+/* line 62, sass/modules/_modules.scss */
+.landing-block:hover {
+  background-color: #a42126;
+  background-image: none !important;
+}
 
-/* line 55, sass/modules/_modules.scss */
+/* line 69, sass/modules/_modules.scss */
+.landing-wrapper {
+  background-color: #a42126;
+}
+
+/* line 72, sass/modules/_modules.scss */
 .landing-block img {
   display: block;
 }
 
-/* line 59, sass/modules/_modules.scss */
+/* line 76, sass/modules/_modules.scss */
 .landing-block .hover-text {
   opacity: 0;
   display: table;
@@ -926,36 +1010,36 @@ nav {
   color: #ffffff;
   background: #a42126;
   text-decoration: none;
-  text-align: center;
+  text-align: left;
   -webkit-transition: opacity 500ms;
   -moz-transition: opacity 500ms;
   -o-transition: opacity 500ms;
   transition: opacity 500ms;
-  padding: 40px 25px 30px 25px;
+  padding: 40px 10% 30px 10%;
 }
-/* line 78, sass/modules/_modules.scss */
+/* line 95, sass/modules/_modules.scss */
 .landing-block .hover-text a {
   color: #FFFFFF;
   text-decoration: none;
 }
-/* line 81, sass/modules/_modules.scss */
+/* line 98, sass/modules/_modules.scss */
 .landing-block .hover-text a:hover {
   text-decoration: none;
   border-bottom: 1px solid white;
 }
-/* line 88, sass/modules/_modules.scss */
+/* line 105, sass/modules/_modules.scss */
 .landing-block .hover-text.show-text {
   opacity: 1;
 }
 
-/* line 93, sass/modules/_modules.scss */
+/* line 110, sass/modules/_modules.scss */
 .landing-block:hover .hover-text {
   opacity: 1;
   background-color: #a42126;
   z-index: 100;
 }
 
-/* line 99, sass/modules/_modules.scss */
+/* line 117, sass/modules/_modules.scss */
 .sub-text {
   display: block;
   width: 100%;
@@ -965,14 +1049,21 @@ nav {
   font-weight: 100;
 }
 
-/* line 107, sass/modules/_modules.scss */
+/* line 125, sass/modules/_modules.scss */
 .large-text {
-  font-size: 6.4rem;
+  font-size: 4.4rem;
   line-height: 1.1875;
   font-weight: 100;
+  letter-spacing: 0.05em;
+}
+@media (min-width: 1200px) {
+  /* line 125, sass/modules/_modules.scss */
+  .large-text {
+    font-size: 5.2rem;
+  }
 }
 
-/* line 116, sass/modules/_modules.scss */
+/* line 139, sass/modules/_modules.scss */
 .parrallax-bg {
   background-repeat: no-repeat;
   background-position: center;
@@ -981,7 +1072,7 @@ nav {
   height: calc(100vh);
 }
 
-/* line 127, sass/modules/_modules.scss */
+/* line 150, sass/modules/_modules.scss */
 .project-block {
   display: table;
   color: #FFFFFF;
@@ -990,23 +1081,28 @@ nav {
   height: 390px;
   margin-top: calc(25vh);
   padding: 25px;
+  position: absolute;
+  left: 5%;
 }
-@media (max-width: 750px) {
-  /* line 127, sass/modules/_modules.scss */
+@media (max-width: 550px) {
+  /* line 150, sass/modules/_modules.scss */
   .project-block {
     width: 350px;
     height: 350px;
-    margin-left: 5%;
+    margin: 0 auto;
+    margin-top: calc(25vh);
+    position: relative;
+    left: auto;
   }
 }
 
-/* line 144, sass/modules/_modules.scss */
+/* line 171, sass/modules/_modules.scss */
 .middle {
   display: table-cell;
   vertical-align: middle;
 }
 
-/* line 148, sass/modules/_modules.scss */
+/* line 175, sass/modules/_modules.scss */
 .arrow-down {
   margin: 0 auto;
   width: 100%;
@@ -1014,44 +1110,50 @@ nav {
   text-align: center;
   top: -80px;
   position: relative;
+  height: 10px;
 }
-/* line 157, sass/modules/_modules.scss */
+/* line 184, sass/modules/_modules.scss */
 .arrow-down a {
   color: white;
 }
-/* line 160, sass/modules/_modules.scss */
+/* line 187, sass/modules/_modules.scss */
 .arrow-down a:hover {
   text-decoration: none;
   color: white;
   opacity: 0.7;
 }
 
-/* line 169, sass/modules/_modules.scss */
+/* line 196, sass/modules/_modules.scss */
 .white-bg {
   background-color: white;
-  margin-bottom: 60px;
 }
 
-/* line 174, sass/modules/_modules.scss */
+/* line 201, sass/modules/_modules.scss */
 .project-content {
-  padding: 20px 0 20px 0;
+  padding: 50px 0 30px 0;
 }
 @media (max-width: 750px) {
-  /* line 174, sass/modules/_modules.scss */
+  /* line 201, sass/modules/_modules.scss */
   .project-content {
     margin-top: 30px;
     padding: 20px 5% 20px 5%;
   }
 }
 
-/* line 183, sass/modules/_modules.scss */
+@media (max-width: 750px) {
+  /* line 210, sass/modules/_modules.scss */
+  .project-info {
+    padding-bottom: 30px;
+  }
+}
+/* line 212, sass/modules/_modules.scss */
 .project-info h3 {
   color: black;
   font-size: 2.4em;
   line-height: 1.3;
 }
 
-/* line 189, sass/modules/_modules.scss */
+/* line 220, sass/modules/_modules.scss */
 .photos-half, .photos-full {
   float: left;
   width: 100%;
@@ -1062,12 +1164,19 @@ nav {
   position: relative;
 }
 
-/* line 199, sass/modules/_modules.scss */
+@media (max-width: 750px) {
+  /* line 231, sass/modules/_modules.scss */
+  .first-half-photo {
+    margin-bottom: 15px;
+  }
+}
+
+/* line 238, sass/modules/_modules.scss */
 .photos-full {
   height: 700px;
 }
 
-/* line 208, sass/modules/_modules.scss */
+/* line 247, sass/modules/_modules.scss */
 .half-bg {
   background-repeat: no-repeat;
   display: block;
@@ -1082,7 +1191,7 @@ nav {
   z-index: 1;
 }
 @media (max-width: 750px) {
-  /* line 208, sass/modules/_modules.scss */
+  /* line 247, sass/modules/_modules.scss */
   .half-bg {
     position: relative;
     height: 60vh;
@@ -1090,80 +1199,102 @@ nav {
   }
 }
 
-/* line 230, sass/modules/_modules.scss */
+/* line 269, sass/modules/_modules.scss */
 .page-content {
   background-color: #FFFFFF;
   margin-top: 120px;
   z-index: 0;
   margin-bottom: 120px;
 }
-/* line 237, sass/modules/_modules.scss */
+/* line 276, sass/modules/_modules.scss */
 .page-content h1 {
   font-size: 2.4rem;
   line-height: 1.2;
   margin-bottom: 1.6rem;
 }
 @media (max-width: 750px) {
-  /* line 230, sass/modules/_modules.scss */
+  /* line 269, sass/modules/_modules.scss */
   .page-content {
     margin-top: 30px;
     padding: 0 5% 0 5%;
   }
 }
 
-/* line 252, sass/modules/_modules.scss */
+/* line 291, sass/modules/_modules.scss */
 .align-right {
   text-align: right;
   padding-right: 10px;
 }
 
-/* line 256, sass/modules/_modules.scss */
+/* line 297, sass/modules/_modules.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 300, sass/modules/_modules.scss */
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -30px;
+}
+
+/* line 306, sass/modules/_modules.scss */
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+
+/* line 310, sass/modules/_modules.scss */
+.site-footer, .page-wrap:after {
+  height: 30px;
+}
+
+/* line 314, sass/modules/_modules.scss */
 .site-footer {
   width: 100%;
   height: 30px;
   background-color: #a42126;
   z-index: 1000000000;
-  padding: 15px 0 0 0;
+  padding: 5px 0 0 0;
   color: white;
-  margin-top: 0px;
   clear: both;
   position: relative;
   bottom: 0;
-  height: 100%;
 }
-/* line 271, sass/modules/_modules.scss */
+/* line 327, sass/modules/_modules.scss */
 .site-footer i {
   padding-right: 10px;
 }
-/* line 275, sass/modules/_modules.scss */
+/* line 331, sass/modules/_modules.scss */
 .site-footer a {
   color: white;
+  padding-bottom: 0px;
 }
-/* line 277, sass/modules/_modules.scss */
+/* line 333, sass/modules/_modules.scss */
 .site-footer a:hover {
   opacity: 0.5;
   color: white;
 }
+/* line 340, sass/modules/_modules.scss */
+.site-footer p {
+  padding-bottom: 0px;
+  margin-bottom: 0;
+}
 @media (max-width: 750px) {
-  /* line 256, sass/modules/_modules.scss */
+  /* line 314, sass/modules/_modules.scss */
   .site-footer {
     padding: 10px 5% 0 5%;
     text-align: center;
-    height: 100%;
+    height: 85px;
   }
-  /* line 287, sass/modules/_modules.scss */
+  /* line 348, sass/modules/_modules.scss */
   .site-footer .align-right {
     margin-top: 8px;
     text-align: center;
   }
 }
 
-/* line 294, sass/modules/_modules.scss */
-.home-footer {
-  margin-top: 100vh;
-}
-
-/* line 298, sass/modules/_modules.scss */
+/* line 357, sass/modules/_modules.scss */
 .clearfix:after {
   visibility: hidden;
   display: block;
@@ -1173,18 +1304,18 @@ nav {
   height: 0;
 }
 
-/* line 306, sass/modules/_modules.scss */
+/* line 365, sass/modules/_modules.scss */
 .clearfix {
   display: inline-block;
 }
 
 /* start commented backslash hack \*/
-/* line 308, sass/modules/_modules.scss */
+/* line 367, sass/modules/_modules.scss */
 * html .clearfix {
   height: 1%;
 }
 
-/* line 309, sass/modules/_modules.scss */
+/* line 368, sass/modules/_modules.scss */
 .clearfix {
   display: block;
 }

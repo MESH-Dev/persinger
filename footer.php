@@ -1,9 +1,9 @@
-  
-<div class="site-footer <?php if(is_front_page()){echo "home-footer";}?>">
+</div>
+<div class="site-footer  ">
 
-	<div class="container">
+	 
 		<div class="row">
-			<div class="columns-6 offset-by-1">
+			<div class="columns-5 offset-by-1">
 				<a href="https://www.facebook.com/persingerandassociates" target="_blank"><i class="fa fa-facebook-square fa-lg"></i></a>
 				<a href="mailto:info@persingerandassociates.com" target="_blank"> <i class="fa fa-envelope-o fa-lg"></i></a>
 				
@@ -14,7 +14,7 @@
 				 </div>
 			</div> 
 		</div>
-	</div>
+ 
 
 </div>
 

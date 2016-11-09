@@ -28,7 +28,8 @@ $('.sidr-trigger').sidr({
 
 
 //If sidr menu item has a .sub-menu (children), append the open button
- $('.sidr ul.menu > li').has('.sub-menu').append('<div class="open"><i class="fa fa-fw fa-angle-down fa-2x"></i></div>');
+
+ $('.sidr ul.menu > li').has('.sub-menu').append('<span class="open menu-arrow-down"> </span>');
 
 //This handles the open/close function on the nav
 //One click opens, 2nd click closes
@@ -39,21 +40,21 @@ $('.sidr-trigger').sidr({
   $('ul.sub-menu')
     .slideUp()
     .removeClass('sidr-active');
+
   //Remove any .fa-minus classes and return to initial fa-plus class on each click
-  $('.open i')
-    .removeClass('fa-angle-up')
-    .addClass('fa-angle-down');
+  $('.open')
+    .removeClass('rotate');
+
   //On click find the nearest ul.sub-menu and open it
   $(this)
     .closest('li')
     .find('ul.sub-menu')
     .addClass('sidr-active')
     .slideDown();
+
   //On click find the .open button and change the symbol from closed to open
   $(this)
-    .find('i')
-    .removeClass('fa-angle-down')
-    .addClass('fa-angle-up');
+    .addClass('rotate');
 },
 function(){
   //Close the .sub-menu
@@ -61,10 +62,10 @@ function(){
     .closest('li')
     .find('ul.sub-menu')
     .removeClass('sidr-active')
-    .slideUp();;
-  $(this).find('i')
-    .removeClass('fa-angle-up')
-    .addClass('fa-angle-down');
+    .slideUp();
+  $(this)
+    .removeClass('rotate');
+ 
 
 });
 //----------------------------------------------------------------------------------------------------------------------------------------------------
