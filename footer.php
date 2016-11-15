@@ -10,7 +10,7 @@
 			</div> 
 			<div class="columns-5">
 				 <div class="align-right">
-					<p>Copyright <?php echo date('Y');?> Presinger & Associates. Designed by <a href="http://meshfresh.com" target="_blank">MESH</a></p>
+					<p>Copyright <?php echo date('Y');?> Persinger & Associates, Inc.  Website by <a href="http://meshfresh.com" target="_blank">MESH</a></p>
 				 </div>
 			</div> 
 		</div>

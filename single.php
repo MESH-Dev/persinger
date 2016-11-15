@@ -5,7 +5,7 @@
 ?>
 
 
-	<div class="parrallax-bg" data-parallax="scroll" data-image-src="<?php echo $image['sizes']['background-fullscreen'] ?>">
+	<div class="parrallax-bg"  style="background-image: url(<?php echo $image['sizes']['background-fullscreen'] ?>)">
 		<?php if ( have_posts() ) while ( have_posts() ) : the_post(); 
 			$categories = get_the_category();
 	 
@@ -90,6 +90,26 @@
 				}
 			}
 		?>
+
+		<div class="row padding-bottom">
+			<div class="columns-12">
+				<div class="prev-link project-link">
+					<?php
+					$prev_post = get_previous_post();
+					if (!empty( $prev_post )): ?>
+					  <a href="<?php echo $prev_post->guid ?>"><img src="<?php bloginfo( 'template_url' ); ?>/img/black-arrow-left.png" alt=""><?php echo $prev_post->post_title ?></a>
+					<?php endif ?>
+				</div>
+ 
+				<div class="next-link project-link">
+					<?php 
+					$next_post = get_next_post();
+					if (!empty( $next_post )): ?>
+					  <a href="<?php echo get_permalink( $next_post->ID ); ?>"><?php echo $next_post->post_title; ?><img src="<?php bloginfo( 'template_url' ); ?>/img/black-arrow-right.png" alt=""></a>
+					<?php endif; ?>
+				</div>
+			</div>
+		</div>
 		
 
 

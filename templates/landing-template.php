@@ -56,9 +56,9 @@
 		
 		<div class="columns-4 no-padding">
 			<div class="landing-block " >
-		   	 	<div class="large-text hover-text show-text">
+		   	 	<div class="large-text hover-text show-text final-text">
 		   	 		<div class="middle">
-		   	 			<a href="<?php echo $final_block_link; ?>"><?php echo $final_block_text; ?></a> 
+		   	 			<a href="<?php echo $final_block_link; ?>"><?php echo $final_block_text; ?> <img src="<?php bloginfo( 'template_url' ); ?>/img/arrow-right.png" alt=""></a> 
 		   	 		</div>
 		   	 	</div>
 		   		

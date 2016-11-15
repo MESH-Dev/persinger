@@ -49,10 +49,12 @@
 		<div class="container">
 
 			<div class="columns-8">
+				<?php $template = get_page_template(); 
+				if(strpos($template, 'landing-template') === false){ ?>
 				<div class="logo">
 					 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"> <img src="<?php bloginfo( 'template_url' ); ?>/img/logo.png" alt=""></a> 
 				</div>
-				
+				<?php } ?>
 			</div>
 		</div>	 
 		<div id="nav-icon" class="sidr-trigger" >
